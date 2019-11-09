@@ -11,8 +11,8 @@ def hasard():
 def factorielle(n):
     return reduce(lambda x, y: x*y, range(1, n+1))
 
-def listesPuissances(n):
-    return [list(map(lambda x: x(r), [lambda x: x**2, lambda x: x**3]))) for r in range(n)]
+#def listesPuissances(n):
+#    return [list(map(lambda x: x(r), [lambda x: x**2, lambda x: x**3]))) for r in range(n)]
 
 def listesPuissances2(n):
     return [[x**p for p in [1,2]] for x in range(10)]
@@ -29,7 +29,7 @@ def isInside(c, s):
 
 #Exercice 5
 def marteau(str1, str2):
-    if len(str1) == len(str2): print(sum(x != y for x, y in zip(str1, str2)))
+    return sum(x != y for x, y in zip(str1, str2)) if len(str1) == len(str2) else 'error'
 
 
 #Exercice 6

@@ -6,12 +6,53 @@ All of these programs were done during my first year of learning Python.
 
 """
 
+#
+#==============================================================================
+#  Repeat a sentence
+#==============================================================================
+#
+
+
+# One Line script
 
 def repeatSentence(sentence, number):
     print(*["\n" + str(sentence) for repeat in range(number)])
 
-#repeatSentence("I like to move it, move it !", 3)
-    
+
+# Normal Script
+
 def repeatSentenceEasy(sentence, number):
     for repeat in range(number):
         print("\n" + str(sentence))
+
+
+# Tests
+
+#repeatSentence("I like to move it, move it !", 3)
+
+
+
+#
+#==============================================================================
+#  
+#==============================================================================
+#
+
+
+# One Line script
+
+
+
+# Normal Script
+
+
+
+# Tests
+
+
+
+
+
+
+
+

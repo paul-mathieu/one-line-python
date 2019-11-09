@@ -12,8 +12,10 @@ def factorielle(n):
     return reduce(lambda x, y: x*y, range(1, n+1))
 
 def listesPuissances(n):
-    for r in range(n): print( list(map(lambda x: x(r), [lambda x: x**2, lambda x: x**3]))) 
+    return [list(map(lambda x: x(r), [lambda x: x**2, lambda x: x**3]))) for r in range(n)]
 
+def listesPuissances2(n):
+    return [[x**p for p in [1,2]] for x in range(10)]
 
 #Exercice 3
 def palindrome(s):

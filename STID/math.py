@@ -63,6 +63,46 @@ def elementsOfStringEasy():
 
 
 
+#
+#==============================================================================
+#  Give all prime numbers up to a fixed value
+#==============================================================================
+#
+
+
+# One Line script
+
+def nPrimeNumbers(n):
+    return [x for x in range(2, n) if not 0 in map(lambda y : x % y, range(2, int(x**0.5 + 1)))]
+
+
+# Normal Script
+
+def nPrimeNumbersEasy(n):
+    
+    liste = []
+    
+    for number in range(n + 1): 
+          
+       #if num is divisible by any number between 2 and number, it's not a prime  
+       if number > 1: 
+           for n in range(2, number): 
+               if (number % n) == 0: 
+                   break
+           else: 
+               liste.append(number)
+    
+    return liste
+
+
+# Tests
+
+#nPrimeNumbers(100)
+
+
+
+
+
 
 
 

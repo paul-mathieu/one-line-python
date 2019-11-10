@@ -195,3 +195,37 @@ def countNumbersLettersEasy(sentence):
 
 
 
+#
+#==============================================================================
+#  
+#==============================================================================
+#
+
+
+# One Line script
+
+def countElements(sentence):
+    return dict(sorted([(element, phrase.count(element)) for element in sentence]))
+
+
+# Normal Script
+
+def countElementsEasy(sentence):
+    
+    elementsDict = {}
+    elementsList = []
+    
+    for elements in sentence:
+        if not elements in elementsDict:
+            elementsDict[elements] = 1
+        else:
+            elementsDict[elements] += 1
+    
+    #for key, value in elementsDict:
+    #    elementsList.append((key, value))
+        
+    return elementsDict
+
+# Tests
+
+

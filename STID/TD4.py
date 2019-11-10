@@ -21,7 +21,7 @@ def pna(liste):
 #Exercice 4
 
 def compterLettres(phrase):
-    print(dict([(x, phrase.count(x)) for x in phrase]))
+    return dict(sorted([(x, phrase.count(x)) for x in phrase]))
 
 
 #Exercice 5

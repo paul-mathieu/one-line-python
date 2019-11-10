@@ -30,14 +30,14 @@ from functools import reduce
 #print(reduce(lambda x, y : x + y, list(map(lambda x: x.a(),list(phrase)))) for a in range(('isdigit', 'isalpha')))
 #reduce(lambda x, y : x + y, list(map(lambda x: x.isdigit(),list(phrase))))
 
-def compterLettreChiffres(phrase):
+def compterLettreChiffres_v1(phrase):
     print("nombres : " +
           str(reduce(lambda x, y : x + y, list(map(lambda x: x.isdigit(),list(phrase))))) +
           " et lettres : " +
           str(reduce(lambda x, y : x + y, list(map(lambda x: x.isalpha(),list(phrase)))))
           )
 
-def compterLettreChiffres2(phrase):
+def compterLettreChiffres_v2(phrase):
     print("nombres : " +
           str(sum(list(map(lambda x: x.isdigit(),list(phrase))))) +
           " et lettres : " +
@@ -45,7 +45,8 @@ def compterLettreChiffres2(phrase):
           )
 
 
-
+def compterLettreChiffres_v3(phrase):
+    return {"numbers":sum(map(lambda x: x.isdigit(),list(phrase))), "letters":sum(map(lambda x: x.isalpha(),list(phrase)))}
 
 
 

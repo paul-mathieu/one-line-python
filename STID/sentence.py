@@ -6,6 +6,9 @@ All of these programs were done during my first year of learning Python.
 
 """
 
+from functools import reduce
+
+
 #
 #==============================================================================
 #  Repeat a sentence
@@ -41,13 +44,13 @@ def repeatSentenceEasy(sentence, number):
 
 # One Line script
 
-def sentenceToCamel(phrase):
-    return "".join(x + y for x, y in zip(phrase[::2].upper(), phrase[1::2].lower()))
+def sentenceToCamel(sentence):
+    return "".join(x + y for x, y in zip(sentence[::2].upper(), sentence[1::2].lower()))
 
 
 # Normal Script
 
-def sentenceToCamelEasy(phrase):
+def sentenceToCamelEasy(sentence):
     
     #initialization of the variable that will be returned
     string = ""
@@ -55,11 +58,11 @@ def sentenceToCamelEasy(phrase):
     #for each element of the string,
     #if it is even, it will be returned in upper case
     #else it will be returned in lower case
-    for k in range(len(phrase)):
+    for k in range(len(sentence)):
         if k%2 == 0:
-            string += phrase[k].upper()
+            string += sentence[k].upper()
         else:
-            string += phrase[k].lower()
+            string += sentence[k].lower()
     
     return string
 
@@ -137,6 +140,58 @@ def marteauEasy(str1, str2):
 
 
 
+
+#
+#==============================================================================
+#  
+#==============================================================================
+#
+
+
+# One Line script
+
+#you can print this
+def countNumbersLetters_v1(sentence):
+    print("nombres : " +
+          str(reduce(lambda x, y : x + y, list(map(lambda x: x.isdigit(),list(sentence))))) +
+          " et lettres : " +
+          str(reduce(lambda x, y : x + y, list(map(lambda x: x.isalpha(),list(sentence)))))
+          )
+
+#or this (convert a map to a list is not necessary)
+def countNumbersLetters_v2(sentence):
+    print("nombres : " +
+          str(sum(list(map(lambda x: x.isdigit(),list(sentence))))) +
+          " et lettres : " +
+          str(sum(list(map(lambda x: x.isalpha(),list(sentence)))))
+          )
+
+#or you can return a dict
+def countNumbersLetters_v3(sentence):
+    return {"numbers":sum(map(lambda x: x.isdigit(),list(sentence))), "letters":sum(map(lambda x: x.isalpha(),list(sentence)))}
+
+
+# Normal Script
+
+def countNumbersLettersEasy(sentence):
+    #count variables
+    nbNumbers, nbLetters = 0, 0
+    dictio = {}
+    
+    for element in sentence:
+        if element.isdigit():
+            nbNumbers += 1
+        elif element.isalpha():
+            nbLetters += 1
+    
+    dictio['numbers'] = nbNumbers
+    dictio['letters'] = nbLetters
+    
+    return dictio
+
+# Tests
+
+#countNumbersLetters_v3('Hello world 666')
 
 
 

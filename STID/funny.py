@@ -96,6 +96,31 @@ def genAcidesEasy():
 
 
 
+#
+#==============================================================================
+#  
+#==============================================================================
+#
+
+
+# One Line script
+
+from random import randint
+
+def listeCartes():
+    return [str(a) + " de " + str(b) for b in ["Coeur", "Carreau", "Trefle", "Pique"] for a in list(range(2,11)) + ["Valet", "Dame", "Roi", "As"] ]
+
+
+# Normal Script
+
+
+
+# Tests
+
+
+
+
+
 
 
 

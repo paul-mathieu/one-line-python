@@ -60,6 +60,39 @@ def doATreeEasy2(size):
 
 
 
+#
+#==============================================================================
+#  
+#==============================================================================
+#
+
+
+# One Line script
+
+def genAcides_V1():
+    return list(filter((lambda x : x != "UAA" and x != "UAG" and x != "UGA"), list(str(a + b + c) for a in ["A", "C", "G", "U"] for b in ["A", "C", "G", "U"] for c in ["A", "C", "G", "U"])))
+
+def genAcides_V2():
+    return [a + b + c for a in ["A", "C", "G", "U"] for b in ["A", "C", "G", "U"] for c in ["A", "C", "G", "U"] if a + b + c not in ["UAA", "UAG", "UGA"]]
+
+
+# Normal Script
+
+def genAcidesEasy():
+    acidsList = []
+    letters = ["A", "C", "G", "U"]
+    
+    for a in letters:
+        for b in letters:
+            for c in letters:
+                if a + b + c not in ["UAA", "UAG", "UGA"]:
+                    acidsList.append(a + b + c)
+                    
+    return acidsList
+
+# Tests
+
+#genAcides_V2()
 
 
 

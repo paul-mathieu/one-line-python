@@ -213,19 +213,21 @@ def countElements(sentence):
 def countElementsEasy(sentence):
     
     elementsDict = {}
-    elementsList = []
     
-    for elements in sentence:
-        if not elements in elementsDict:
-            elementsDict[elements] = 1
+    for element in sentence:
+        if not element in elementsDict:
+            elementsDict[element] = 1
         else:
-            elementsDict[elements] += 1
-    
-    #for key, value in elementsDict:
-    #    elementsList.append((key, value))
+            elementsDict[element] += 1
         
     return elementsDict
 
 # Tests
+
+#
+
+
+
+
 
 

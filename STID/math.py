@@ -1,7 +1,7 @@
 """
 Author : Paul Mathieu (/paul-mathieu)
 
-In this file, you can find Python programs in one line to play with strings.
+In this file, you can find Python math programs in one line.
 All of these programs were done during my first year of learning Python.
 
 """

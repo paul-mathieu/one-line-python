@@ -224,7 +224,7 @@ def countElementsEasy(sentence):
 
 # Tests
 
-#
+#countElementsEasy('This is a test sentence 123.')
 
 
 
